@@ -20,7 +20,9 @@ Movement -> WASD
 
 Pause Game -> Esc
 
----
+-------------------------------------------------------------------------------
+
+Dev Cheats:
 
 Force Passive Upgrade (Level Up) -> Spacebar
 
