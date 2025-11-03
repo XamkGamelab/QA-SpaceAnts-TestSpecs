@@ -6,7 +6,7 @@
 - Scenario: Game is running and is on the MainMenu
 
 ## Steps (Given–When–Then)
-1. **Given** MainMenu is oppen
+1. **Given** MainMenu is open
 2. **When** Press "Start"
 3. **Then** Gamen starts
 
@@ -87,15 +87,14 @@
 
 ## Steps (Given–When–Then)
 1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+2. **When** User moves character by WASD (on keyboard) or joystick (on mobile)
+3. **Then** Character moves to directed way
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- Character moves as expected
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
+- **Aditional Notes:** boundaries = Character can not leave the arena.
 
 
 
@@ -107,16 +106,16 @@
 - Scenario: Game is running and not in menu
 
 ## Steps (Given–When–Then)
-1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+1. **Given** Game is not paused and playloop is on
+2. **When** Character tryes to leaf the arena
+3. **Then** Bounderies push back.
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- Character is unable to escape the arena and is pushed back stronger the further they try to push into the edge
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
+- **Aditional Notes:** Push feels like air/wind pushing on the player
+
 
 
 
@@ -128,16 +127,15 @@
 - Scenario: Game is running and not in menu
 
 ## Steps (Given–When–Then)
-1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+1. **Given** Game is not paused and playloop is on
+2. **When** The player attacks enemy characters with the weapons provided
+3. **Then** Enemy character is destroyed and drops an xp item
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- Enemy character is destroyed
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
+- **Aditional Notes:** Killing an enemy character may require multiple hits
 
 
 
@@ -150,15 +148,14 @@
 
 ## Steps (Given–When–Then)
 1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+2. **When** Several enemy characters appear on the field.
+3. **Then** Enemy characters follow the player and if the player moves around the circle, the characters' movement places them in a smaller circle.
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- Enemy characters cannot stack.
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
+- **Aditional Notes:** Enemy characters have slow and low thrust relative to each other.
 
 
 
@@ -170,16 +167,15 @@
 - Scenario: Game is running and not in menu
 
 ## Steps (Given–When–Then)
-1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+1. **Given** Game is not paused and Grasshopper enemy is present
+2. **When** When a Grasshopper enemy gets close enough to the player
+3. **Then** It will perform a dash/charge attack.
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- The Grasshopper enemy will make a dash/charge attack and stay in place for a moment afterwards.
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
+- **Aditional Notes:** The Grasshopper enemy also has a separate animation before attacking "charging the attack"
 
 
 
@@ -192,16 +188,14 @@
 
 ## Steps (Given–When–Then)
 1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+2. **When** When a player kills an enemy, they drop an XP orb.
+3. **Then** The player can collect XP by moving close enough to an orb for it to automatically accumulate.
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- The XP orb moves towards the player and the player's XP number on the screen increases.
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
-
+- **Aditional Notes:** The XP orb has its own animation where it moves smoothly towards the player when the player is close enough to collect XP.
 
 # Test Case – ISSUE-11: Passive upgrades when offered
 **Related issue:** #11
@@ -211,16 +205,15 @@
 - Scenario: Game is running and not in menu
 
 ## Steps (Given–When–Then)
-1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+1. **Given** Game is not paused.
+2. **When** When the player collects XP and reaches the next level.
+3. **Then** An update window will automatically start.
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- When a new level is reached, the game stops and the player is offered three different upgrade packages.
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
+- **Aditional Notes:** The player can track the progress of reaching the required amount of Xp for the next level in the Xp view in the upper right corner. Reaching the next level may require more than one Xp orb.
 
 
 
@@ -233,12 +226,11 @@
 
 ## Steps (Given–When–Then)
 1. **Given** Game is not paused
-2. **When** action / time passes / input
-3. **Then** expected result
+2. **When** Elite enemy killed.
+3. **Then** The weapon upgrade or new weapon selection menu will launch.
 
 ## Expected Results
-- assertion 1
-- assertion 2
+- The player can choose a weapon upgrade or a new weapon from the menu.
 
 ## Notes
-- **Aditional Notes:** boundaries, invalid/empty/null, timing/physics, spikes
+- **Aditional Notes:** Requires elite enemy killing
