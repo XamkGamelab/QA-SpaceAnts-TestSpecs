@@ -1,4 +1,4 @@
-# Test Case – ISSUE-1: <Using MainMenu system on the platform>
+# Test Case – ISSUE-1: Using MainMenu system on the platform
 **Related issue:** #1 
 **Type:** Functional Test
 
