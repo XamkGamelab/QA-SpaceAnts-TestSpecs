@@ -6,15 +6,15 @@
 - Scenario: <Game is running and is on the MainMenu>
 
 ## Steps (Given–When–Then)
-1. **Given** <MainMenu is oppen>
-2. **When** <Press "Start">
-3. **Then** <Gamen starts>
+1. **Given** MainMenu is oppen
+2. **When** Press "Start"
+3. **Then** Gamen starts
 
 ## Expected Results
-- <Litle to no delay in start>
+- Litle to no delay in start
 
 ## Notes
-- **Aditional Notes:** <Other buttons are not yet implementet>
+- **Aditional Notes:** Other buttons are not yet implementet
 
 
 
@@ -23,7 +23,7 @@
 **Type:** Functional Test
 
 ## Preconditions
-- Scenario: <Game is running and not in menu>
+- Scenario: Game is running and not in menu
 
 ## Steps (Given–When–Then)
 1. **Given** <Game is runnig>
